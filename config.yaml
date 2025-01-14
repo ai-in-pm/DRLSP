@@ -1,0 +1,25 @@
+training:
+  num_episodes: 1000000
+  batch_size: 128
+  eta: 0.1  # anticipatory parameter
+  gamma: 0.99  # discount factor
+  rl_learning_rate: 0.001
+  sl_learning_rate: 0.001
+  rl_buffer_size: 200000
+  sl_buffer_size: 2000000
+  epsilon: 0.1  # exploration rate
+
+model:
+  hidden_dim: 256
+
+game:
+  name: "leduc"
+  num_players: 2
+
+llm:
+  model: "gpt-4-turbo-preview"
+  temperature: 0.7
+
+dashboard:
+  update_interval: 100
+  metrics_history: 1000
